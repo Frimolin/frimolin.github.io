@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInLeft','visible');
+                    } else {
+                        entry.target.classList.remove('animate__fadeInLeft','visible');
+                    }
+                });
+            }, options);
+    
+            const items = document.querySelectorAll('.gauche');
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInRight','visible');
+                    } else {
+                        entry.target.classList.remove('animate__fadeInRight','visible');
+                    }
+                });
+            }, options);
+    
+            const items = document.querySelectorAll('.droite');
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+
+</head>
+<body class="body">
+    <header>
+    </header>
+    <main class="container">
+        <section class="snap">
+            <div class="animate__animated animate__fadeInDown centertext">
+                <div class="bigfont">
+                    <h1>Parisel Guillaume</h1>
+                </div>
+                <p>Email | Phone | LinkedIn | Github</p>
+
+                <div class="bigfont">
+                    <h2>Skills</h2>
+                </div>
+            </div>
+
+            <div class="grid4">
+                <div class="bloc1 animate__animated animate__fadeInLeft anidelay1">
+
+                </div>
+                <div class="bloc1 animate__animated animate__fadeInRight anidelay1">
+                    
+                </div>
+                <div class="bloc1 animate__animated animate__fadeInLeft anidelay2">
+                    
+                </div>
+                <div class="bloc1 animate__animated animate__fadeInRight anidelay2">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="snap">
+            <div class="centertext">
+                <div class="bigfont">
+                    <h2>Experiences</h2>
+                </div>
+            </div>
+
+            <div class="grid4">
+                <div class="bloc2 animate__animated gauche anidelay1">
+
+                </div>
+                <div class="bloc2 animate__animated droite anidelay1">
+                    
+                </div>
+                <div class="bloc2 animate__animated gauche anidelay2">
+                    
+                </div>
+                <div class="bloc2 animate__animated droite anidelay2">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

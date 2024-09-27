@@ -9,10 +9,6 @@ img{
     max-width: 100%;
     max-height: 100%;
 }
-.bloc1{
-    display: flex;
-    padding: 5px;
-}
 .gauche {
     opacity: 0;
 }
@@ -74,7 +70,10 @@ input{
 textarea{
     width: 70%;
 }
-
+button{
+    width:40%;
+    left:0;
+}
 .container{
     height: 100vh;
 }
@@ -84,6 +83,9 @@ textarea{
 }
 .bigfont{
     font-size: 2rem;
+}
+.font{
+    font-size: x-large;
 }
 .small{
     height: 100vh;
@@ -133,6 +135,21 @@ textarea{
         height: 200px;
         background-repeat: no-repeat;
         border-radius: 50%;
+    }
+}
+@media (min-width: 1024){
+    .bloc1{
+        display: flex;
+        padding: 5px;
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 1023){
+    .bloc1{
+        display: flex;
+        padding: 5px;
+        font-size: large;
     }
 }
 

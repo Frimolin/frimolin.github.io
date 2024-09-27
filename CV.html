@@ -55,41 +55,116 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp','visible');
+                    } else {
+                        entry.target.classList.remove('animate__fadeInUp','visible');
+                    }
+                });
+            }, options);
+    
+            const items = document.querySelectorAll('.bas');
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__bounce','visible');
+                    } else {
+                        entry.target.classList.remove('animate__bounce','visible');
+                    }
+                });
+            }, options);
+    
+            const items = document.querySelectorAll('.bounce');
+            items.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
 
 </head>
-<body class="body">
+<body>
     <header>
     </header>
     <main class="container">
-        <section class="snap">
+        <section class="snap small">
             <div class="animate__animated animate__fadeInDown centertext">
                 <div class="bigfont">
                     <h1>Parisel Guillaume</h1>
                 </div>
-                <p>Email | Phone | LinkedIn | Github</p>
-
+                <p><a href="mailto:guillaume.parisel001@gmail.com">guillaume.parisel001@gmail.com</a> | <a href="tel:+33 6 79 25 89 27">+33 6 79 25 89 27</a> | <a href="https://www.linkedin.com/in/guillaume-parisel-066a0a323/">LinkedIn</a> | <a href="https://github.com/Frimolin">Github</a></p>
+            </div>
+            <div class="bloc3 animate__animated animate__fadeInUp">
+                <div class="grid2">
+                    <div class="bloc1 photo">
+                        
+                    </div>
+                    <div class="bloc1">
+                        Currently studying at Epitech Nantes and searching for an apprenticeship<br>
+                        I am a curious person with good social skills, I like to learn and to teach. <br>
+                        Sporty and enterprising, my key strength are my maths and computer science skills.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="snap big">
+            <div class="centertext animate__animated bas">
                 <div class="bigfont">
                     <h2>Skills</h2>
                 </div>
             </div>
 
             <div class="grid4">
-                <div class="bloc1 animate__animated animate__fadeInLeft anidelay1">
-
+                <div class="bloc2 animate__animated gauche anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/csharp.png" alt="csharp"></div>
+                        <div class="bloc1">I learned to use C# in school and perfectionned it on my own with personnal projects such as a flappy bird knock-off and a 2D rpg.</div>
+                    </div>
                 </div>
-                <div class="bloc1 animate__animated animate__fadeInRight anidelay1">
-                    
+                <div class="bloc2 animate__animated droite anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/python.png" alt="python"></div>
+                        <div class="bloc1">Python is the first language I learned. I have been using it since 2017 and made a lot of projects with it like a battleship or a real time trajectory corrector for cars.</div>
+                    </div>
                 </div>
-                <div class="bloc1 animate__animated animate__fadeInLeft anidelay2">
-                    
+                <div class="bloc2 animate__animated gauche anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/HTML5_logo.png" alt="html"></div>
+                        <div class="bloc1">I'm still pretty new to html and css but can make websites like this so it's a good start !</div>
+                    </div>
                 </div>
-                <div class="bloc1 animate__animated animate__fadeInRight anidelay2">
-                    
+                <div class="bloc2 animate__animated droite anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/C_Logo.png" alt="c"></div>
+                        <div class="bloc1">I did not use C for a lot of project but i really liked learning about it in school</div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="snap">
-            <div class="centertext">
+        <section class="snap big">
+            <div class="centertext animate__animated bas">
                 <div class="bigfont">
                     <h2>Experiences</h2>
                 </div>
@@ -97,17 +172,127 @@
 
             <div class="grid4">
                 <div class="bloc2 animate__animated gauche anidelay1">
-
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/metallurgie.png" alt="metallurgie"></div>
+                        <div class="bloc1">I worked in the production line of a metallurgy factory for a month in 2024 in SMOC industries. I learned to comply with repetitive task and to be productive on a daily basis.</div>
+                    </div>
                 </div>
                 <div class="bloc2 animate__animated droite anidelay1">
-                    
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/maths.png" alt="maths"></div>
+                        <div class="bloc1">From 2022 to 2024 I gave private maths lessons to highschoolers on almost every weekend, I enjoyed it a lot and learned about pedagogy.</div>
+                    </div>
                 </div>
                 <div class="bloc2 animate__animated gauche anidelay2">
-                    
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/poisson.png" alt="poisson"></div>
+                        <div class="bloc1">As a summer job in 2023 I worked at a fishmonger (Meralliance) and did the packing of fish along with the manutention. I learned how to use teamwork in the workplace.</div>
+                    </div>
                 </div>
                 <div class="bloc2 animate__animated droite anidelay2">
-                    
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/sifflet.png" alt="sifflet"></div>
+                        <div class="bloc1">In my highschool years, to gain a bit of extra money I passed the exam to become an official basket-ball referee for the FFBB. I learned how to work under pressure and how to use authority when needed.</div>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <section class="snap big">
+            <div class="centertext animate__animated bas">
+                <div class="bigfont">
+                    <h2>Hobbies</h2>
+                </div>
+            </div>
+
+            <div class="grid4">
+                <div class="bloc2 animate__animated gauche anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/piano.png" alt="piano"></div>
+                        <div class="bloc1">I play piano since 2012, that's when I first started learning in the Voiron conservatory. I always try to play when I can but right now I don't have a piano in Nantes</div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated droite anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/manette.png" alt="manette"></div>
+                        <div class="bloc1">Video games were always a fascination, ever since I put my hands on the nintendo wii It became an evidence for me that video games would never leave my life. And now that I know how to use unity, I love creating with it.</div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated bounce anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/basket.png" alt="basket"></div>
+                        <div class="bloc1">Since the age of 4 I play a lot of basket-ball, I was thrilled when in 2023 my team became the university league vice-national champion </div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated bounce anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/volley.png" alt="volley"></div>
+                        <div class="bloc1">I also play a lot of volley-ball, my sport life was always split in 2, and those sports really learned me how to fit in a group, how to use teamwork, how to perform under pressure. I was also a pre-national champion in volleyball in 2022</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="snap big">
+            <div class="centertext animate__animated bas">
+                <div class="bigfont">
+                    <h2>Schools i attended</h2>
+                </div>
+            </div>
+
+            <div class="grid4">
+                <div class="bloc2 animate__animated gauche anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/machine.png" alt="nantes"></div>
+                        <div class="bloc1">Since 2024 I'm a student of Epitech Nantes. I'm currently in pre-MSC</div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated droite anidelay1">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/leprechaun.png" alt="leprechaun"></div>
+                        <div class="bloc1">In 2023 I had the chance to participate in a semester abroad in Dublin in computer science. It was a great opportunity to perfect my english</div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated gauche anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/building.png" alt="building"></div>
+                        <div class="bloc1">In 2022 I joined ESILV La défense and started my master in computer science</div>
+                    </div>
+                </div>
+                <div class="bloc2 animate__animated droite anidelay2">
+                    <div class="grid2">
+                        <div class="bloc1"><img src="img/ski.png" alt="ski"></div>
+                        <div class="bloc1">From the start of highschool to the end of my CPGE (PTSI/PT) I was in the Lycée Ferdinand Buisson in Voiron (38)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="snap small">
+            <div class="animate__animated bas centertext">
+                <div class="bigfont">
+                    <h2>Me contacter</h2>
+                </div>
+            </div>
+            <div class="bloc3 animate__animated bas">
+                <form class="row" action="#">
+                    <div class="names bloc1">
+                        <div class="bloc1">
+                            <label for="fname">First name :</label>
+                            <input type="text" id="fname" name="First name" required>
+                        </div>
+                        <div class="bloc1">
+                            <label for="lname">Last name :</label>
+                            <input type="text" id="lname" name="Last name" required>
+                        </div>
+                    </div>
+                    <div class="bloc1">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+                        <div class="bloc1">
+                        <label for="message">Your message :</label>
+                        <textarea id="message" placeholder="Write here" rows="4" required></textarea>
+                        <button type='submit'>Send</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>

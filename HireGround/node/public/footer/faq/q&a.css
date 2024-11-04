@@ -1,0 +1,369 @@
+/*-----------IMPOR---------T*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sawarabi+Mincho&display=swap');
+
+/*----------COLOR------------*/
+:root {
+    --background:#FFFAED;
+    --background-lighter:#fffdfa;
+    --orange-head:#FCDD9D;
+    --very-dark-blue:#66648F;
+    --dark-blue:#9693C2;
+    --very-light-blue:#C4C3E3;
+    --lime:#D4E0A6;
+    --vibrant-orange:#E89574;
+    --old-pink:#E6C1E1;
+}
+
+/*------ROOT BODY HTML---------*/
+body {
+    background-color: var(--background);
+    margin:0;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    margin: 3rem;
+}
+
+/*-------------FONT------------*/
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.6rem;
+    color:var(--very-dark-blue);
+    margin:0; 
+}
+
+h2 {
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color:var(--dark-blue); 
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color:var(--very-dark-blue);
+    text-justify: center;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color:var(--very-dark-blue);  
+}
+
+label{
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color:var(--very-dark-blue);
+}
+
+/*--------------HEADER---------------*/
+header {
+    background-color: var(--orange-head);
+    height: 16vh;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    gap: 36rem;
+    padding-left: 1.4rem;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar a img {
+    width: auto;
+    height: 3vw;
+    margin-top: 0;
+}
+
+.logo {
+    height: 6vw;
+    width: auto;
+    padding-top: 1rem;
+}
+
+header p{
+    font-size: 1.4rem;
+    padding: 5px 13px 5px 13px;
+    border : 2px solid var(--dark-blue);
+    border-radius: 10px;
+    align-items: end;
+    margin-top: 3rem;
+}
+
+/*-----------------INTRO--------------*/
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin:0;
+    padding: 2rem 1rem 0 1rem ;
+}
+
+
+/*--------------ACCORDION--------------*/
+
+.question {
+    display: flex;
+    flex-direction: column;
+    text-justify: center;
+
+}
+
+.accordion{
+    margin-left: auto;
+    margin-right: auto;
+        width: 900px;
+}
+
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding:10px;
+    border-radius: 8px;
+    background-color: var(--background-lighter);
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0, 0.15);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before{
+    content: "+";
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden ;
+    transition: max-height 0.5s, padding 0.5s ;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+
+}
+
+/*----------FOOTER----------*/
+footer {
+    height: 26vh;
+    background-color: var(--very-light-blue);
+    margin-top: 5rem;
+    width: 100%;
+}
+
+footer .container {
+    padding: 5px;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+}
+
+footer p{
+    font-size: 1rem;
+    line-height: 14px;
+}
+
+footer .Rights {
+    display: flex;
+    justify-content: center;
+    margin:0;
+}
+
+/*--------------PHONE------------*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 0.6rem ;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.6rem;
+    }
+    html, body, header, .info .avatar,
+    .my-info,
+    .media,
+    .plus {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header {
+        height:10vh;
+    }
+
+    header .container {
+        gap:2rem;
+        justify-content: center;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .navbar {
+        gap:0.4rem;
+        height: 3vh;
+        margin-top: 2rem;
+    }
+
+    .logo {
+        height: 6vh;
+    }
+
+    header p{
+        font-size: 0.6rem;
+        border: 1px solid var(--dark-blue);
+        margin-top: 2rem;
+        padding: 3px 13px 3px 13px; ;
+    }
+
+    .intro {
+        margin:0;
+        padding: 2rem 1rem 0 1rem ;
+    }
+
+    section {
+        margin:0 1rem 1rem 1rem
+    }
+    
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .accordion li{
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0px;
+    }
+
+    .accordion li label {
+        font-size: 0.7rem;
+    }
+
+    label::before {
+        font-size: 13px;
+    }
+
+    footer {
+        height: 17vh;
+        margin-top: 2.5rem;
+    }
+    footer p{
+        font-size: 0.6rem;
+        line-height: 7px;
+    }
+
+    footer .container {
+        display:flex;
+        justify-content: center;
+        gap:1.5rem;
+        padding-left: 0;
+    }
+}
+
+
+/*------------TABLETTE----------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height:10vh;
+    }
+
+    header .container {
+        gap:3rem;
+        justify-content: center;
+        justify-content: center;
+        padding-left: 0;
+        align-items: center;
+        padding-top: 2rem;
+
+    }
+
+    .navbar {
+        gap:1rem;
+        height: 3vh;
+
+    }
+
+    .logo {
+        height: 7vh;
+    }
+
+    header p{
+        font-size: 1rem;
+        border: 1.5px solid var(--dark-blue);
+    }
+
+    .intro {
+        margin:0;
+        padding: 2rem 1rem 0 1rem ;
+    }
+
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer {
+        height: 17vh;
+        margin-top: 2.5rem;
+    }
+    footer p{
+        font-size: 1rem;
+        line-height: 10px;
+    }
+
+    footer .container {
+        display:flex;
+        justify-content: center;
+        gap:1.5rem;
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+}

@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profil-user.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/">
+            <img src="/icon/Logo_HIREGROUND_.png" class="logo" alt="Logo">
+        </a>
+        
+        <div class="navbar">
+            <a href="/all/offerpost-all.html"><img src="/icon/creatpost.png" class="home" alt="Home"></a>
+            <a href="/candidat/offer-board/offer-board.html"><img src="/icon/emploi.png" class="emploi" alt="Index"></a>
+        </div>
+
+    </div>
+
+    <div class="second-sidebar">
+        <a href="#profil">Profil</a>
+        <a href="../login/login.html">Log out</a>
+    </div>
+
+    <div class="container">
+        <section class="profil" id="profil">
+            <!-------TOP-------->
+            <h1>Hello user !</h1>
+        
+            <!------------INFORMATION--------->
+            <div class="info-row">
+                <div>
+                    <strong>First name:</strong>
+                    <span id="prenom-display"></span>
+                    <input type="text" id="prenom-edit" class="hidden">
+                </div>
+                <div>
+                    <strong>Name:</strong>
+                    <span id="nom-display"></span>
+                    <input type="text" id="nom-edit" class="hidden">
+                </div>
+            </div>
+            <div class="info-row">
+                <div>
+                    <strong>Email:</strong>
+                    <span id="email-display"></span>
+                    <input type="email" id="email-edit" class="hidden">
+                </div>
+                <div>
+                    <strong>Password:</strong>
+                    <span id="password-display"></span>
+                    <input type="password" id="password-edit" class="hidden">
+                </div>
+            </div>
+            <!------------CHANGE PASSWORD-------->
+            <div class="change-password hidden">
+                <h2>Change Password</h2>
+                <div>
+                    <strong>Current Password:</strong>
+                    <input type="password" id="current-password" class="hidden">
+                </div>
+                <div>
+                    <strong>New Password:</strong>
+                    <input type="password" id="new-password" class="hidden">
+                </div>
+                <div>
+                    <strong>Confirm Password:</strong>
+                    <input type="password" id="confirm-password" class="hidden">
+                </div>
+            </div>
+            <button id="edit-btn">Edit</button>
+            <button id="save-btn" class="hidden">Save</button>
+
+        </section>
+
+    </div>
+
+    
+    <script src="profil-user.js" type="module"></script>
+</body>
+</html>

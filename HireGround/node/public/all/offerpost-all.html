@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="offerpost-all.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="/icon/Logo_HIREGROUND_.png" class="logo">
+
+        <div class="navbar">
+            <a href="/"><img src="/icon/home.png" class="home" alt="Home"></a>
+            <a href="../candidat/offer-board/offer-board.html"><img src="/icon/emploi.png" class="emploi" alt="Index"></a>
+            <a href="../login/login.html"><img src="/icon/login.png" class="login" alt="Login"></a>
+
+        </div>
+    </div>
+
+    <section id="home" class="section">
+        <h2>Create a New Job Posting</h2>
+        <form class="form" id="create-form">
+            <div class="form-columns">
+                <div class="column">
+                    <ul class="wrapper">
+                        <li style="--i:8;">
+                            <select class="input" id="entreprisedropdown" placeholder="Company Name" required></select>
+                        </li>
+
+                        <li style="--i:7;">
+                            <input class="input" type="text" id="create-secteur" placeholder="Sector" required>
+                        </li>
+
+                        <li style="--i:5;">
+                            <input class="input" type="text" id="create-nomPoste" placeholder="Job Title" required>
+                        </li>
+
+                        <li style="--i:4;">
+                            <input class="input" type="text" id="create-contrat" placeholder="Contrat" required>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul class="wrapper">
+
+                        <li style="--i:3;">
+                            <select class="input" id="localisationdropdown" placeholder="Location Name" required></select>
+                        </li>
+
+                        <li style="--i:2;">
+                            <input class="input" type="text" id="create-salaire" placeholder="Salary" required>
+                        </li>
+                        <li style="--i:1;">
+                            <textarea class="input" id="create-mission" placeholder="Mission" required></textarea>
+                        </li>
+                        <li style="--i:0;">
+                            <textarea class="input" id="create-profil" placeholder="Desired Profile" required></textarea>
+                        </li>
+                        <button type="submit" style="--i:-1;">Create</button>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <script src="offerpost-all.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Postulants</title>
+    <link rel="stylesheet" href="applicants-data.css"> <!-- Assurez-vous d'avoir un fichier CSS -->
+</head>
+<body>
+        
+    <nav>
+        <a href="post-offer/post-data.html">Post-offer Admin</a>
+        <a href="company/company-data.html">Company Admin</a>
+        <a href="/" class="home"><img src="/icon/Logo_HIREGROUND_.png" alt="Logo Hireground"></a>
+        <a href="candidat/candidat-data.html">Candidat Admin</a>
+        <a href="user/user-data.html">User Admin</a>
+    </nav>
+
+    <section id="home" class="section">
+        <button id="create-applicant-btn" class="action-btn">Creation</button>
+
+        <!-- Modal pour créer une nouvelle Postulant -->
+        <div id="create-modal" class="modal-creat" style="display:none;">
+            <div class="modal-content">
+                <form id="create-form">
+                    <label for="create-PosteID">ID du poste:</label>
+                    <input type="text" id="create-PosteID" required>
+
+                    <label for="create-EmailPostulant">Email Postulant:</label>
+                    <input type="text" id="create-EmailPostulant" required> 
+
+                    <label for="create-FirstNamePostulant">First Name:</label>
+                    <input type="text" id="create-FirstNamePostulant" required>
+
+                    <label for="create-LastNamePostulant">Last Name:</label>
+                    <input type="text" id="create-LastNamePostulant" required>
+
+                    <label for="create-Lettre">Lettre:</label>
+                    <textarea id="create-Lettre" required></textarea>
+
+                    <button type="submit">Create</button>
+                    <button type="button" id="create-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Afficher la liste des Postulants -->
+        <div id="applicant-list-section">
+            <h2>Candidat List</h2>
+            <table id="applicant-list">
+                <thead>
+                    <tr>
+                        <th>PosteID</th>
+                        <th>Email postulant</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Lettre</th> <!-- Nouvelle colonne pour le mot de passe -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les données des Postulants seront insérées ici via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="message-box" style="display: none; background-color: #000000; color: white; padding: 10px; margin-top: 10px;"></div>
+
+        <!-- Modal pour éditer une Postulant -->
+        <div id="edit-modal" class="modal-modify" style="display:none;">
+            <div class="modal-content">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-PosteID"> <!-- Changez PosteID en edit-PosteID -->
+                    <input type="hidden" id="edit-EmailPostulant">
+
+                    <label for="edit-FirstNamePostulant">Firs tName:</label>
+                    <input type="text" id="edit-FirstNamePostulant" required>
+
+                    <label for="edit-LastNamePostulant">Last Name:</label>
+                    <input type="text" id="edit-LastNamePostulant" required>
+
+                    <label for="edit-Lettre">Cover letter:</label>
+                    <textarea id="edit-Lettre" required></textarea>
+
+                    <button type="submit">Submit the modification</button>
+                    <button type="button" id="edit-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="applicants-data.js" type="module"></script>
+</body>
+</html>

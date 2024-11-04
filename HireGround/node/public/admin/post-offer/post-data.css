@@ -1,0 +1,215 @@
+:root{
+    --dark-purple:#4C3228;
+    --purple:#6A4A3A;
+    --light-purple:#765341;
+    --dark-blue:#8B6C5C;
+    --blue:#A08679;
+    --grey:#D8CBC4;
+    --beige:#f4e9e1;
+    --lime:#bed79f;
+    --vibrant-orange:#cb6239;
+    --old-pink:#E6C1E1;
+}
+
+body {
+    background-color: var(--beige);
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    margin-left: 2rem;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--lime);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav a {
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--vibrant-orange);
+    font-weight: 600;
+
+}
+
+img {
+    width: 7%;
+    height: 7%;
+}
+
+
+.modal-creat, .modal-modify {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-image: linear-gradient(45deg, #45215384, #de546094, #f8d6ab86);
+}
+
+.modal-modify {
+    background-image: linear-gradient(45deg, #ffcae784, #b9dcee94, #f8d6ab86);
+
+}
+
+/* Contenu de la modal */
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    background-color: var(--beige);
+    border-radius: 15px;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style des labels dans la modal */
+.modal-content label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--very-dark-blue, #333);  
+    margin-top: 10px;
+}
+
+/* Bouton pour fermer la modal (croix) */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Style des boutons dans la modal */
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7d4e;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #e14000;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: 96%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(158, 117, 51);
+    background-color: var(--beige);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.action-btn {
+    --btn-default-bg: rgb(238, 175, 175);
+    --btn-padding: 9px 20px;
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+    
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+}
+
+.action-btn {
+    position: relative;
+    display: block;
+    left:3rem;
+    margin-top: 2rem;
+}
+
+.action-btn:hover, .action-btn:focus {
+    background: var(--btn-hover-bg);
+    color: var(--hover-btn-color);
+}
+
+.action-btn::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+}
+
+.action-btn:hover::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+    0% { content: "#"; }
+    5% { content: "."; }
+    10% { content: "^{"; }
+    15% { content: "-!"; }
+    20% { content: "#$_"; }
+    25% { content: "№:0"; }
+    30% { content: "#{+."; }
+    35% { content: "@}-?"; }
+    40% { content: "?{4@%"; }
+    45% { content: "=.,^!"; }
+    50% { content: "?2@%"; }
+    55% { content: "\;1}]"; }
+    60% { content: "?{%:%";}
+    65% { content: "|{f[4";}
+    70% { content: "{4%0%";}
+    75% { content: "'1_0<";}
+    80% { content: "{0%";}
+    85% { content: "]>'";}
+    90% { content: "4";}
+    95% { content: "2";}
+    100% { content: "";}
+}
+
+
+span {
+    display: none;
+  }

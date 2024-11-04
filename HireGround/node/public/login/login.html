@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/">
+            <img src="/icon/Logo_HIREGROUND_.png" class="logo" alt="Logo">
+        </a>
+        
+        <div class="navbar">
+            <a href="/../all/offerpost-all.html"><img src="/icon/creatpost.png" class="home" alt="Home"></a>
+            <a href="/../candidat/offer-board/offer-board.html"><img src="/icon/emploi.png" class="emploi" alt="Index"></a>
+        </div>
+
+    <p>Profil</p>
+    </div>
+
+    <div id="message" style="display: none;"></div>
+
+
+    <input type="radio" id="chk0" name="a1" style="display: none;">
+    <input type="radio" id="chk1" name="a1" style="display: none;">
+    <input type="radio" id="chk2" name="a1" style="display: none;">
+    <input type="radio" id="chk3" name="a1" style="display: none;">
+    <input type="radio" id="chk4" name="a1" style="display: none;" checked>
+
+
+
+    <div class="box">
+        <div class="a">
+            <form action="" class="frm" id="create-form">
+                <h6 class="title">SIGN UP AS A COMPANY</h6>
+                <input id="name-company" type="text" placeholder="Enter Name Company">
+                <input id="email-company" type="email" placeholder="Enter Email">
+                <input id="password-company" type="password" placeholder="Enter Password">
+                <input id="localisation-company" type="text" placeholder="Enter Location"> <!-- Ajouté -->
+                <textarea id="description-company" rows="4" placeholder="Enter Company Description"></textarea> <!-- Ajouté -->
+                <input type="button" value="Sign Up" id="btn-signup-company">
+                <label for="chk3" class="btm">Login here as a Company</label>
+                <label for="chk4" class="btm">Back</label>
+            </form>
+            
+        </div>
+
+        <div class="b">
+            <form action="" class="frm">
+                <h6 class="title">SIGN UP FORM</h6>
+                <input id="Firstname" type="text" placeholder="Enter First Name">
+                <input id="Lastname" type="text" placeholder="Enter Last Name">
+                <input id="emailuser" type="text" placeholder="Enter Email">
+                <input id="mdpuser" type="text" placeholder="Enter Password">
+                <input type="text" placeholder="Confirm Password">
+                <input type="button" value="Sign Up" id="btnsu">
+                <label for="chk1" class="btm">Login here as a User</label>
+                <label for="chk4" class="btm">Back</label>
+            </form>
+        </div>
+
+        <div class="c">
+            <form action="" class="frm">
+                <h6 class="title">LOGIN FORM</h6>
+                <input type="email" placeholder="Enter Email" id="emailuserlogin">
+                <input type="password" placeholder="Enter Password" id="mdpuserlogin">
+                <input type="button" value="Login" id="btn-login-user">
+                <label for="chk2" class="btm">Sign Up Here as a User</label>
+                <label for="chk4" class="btm">Back</label>
+            </form>
+        </div>
+
+
+        <div class="d">
+            <form action="" class="frm">
+                <h6 class="title">LOGIN FORM FOR COMPANY</h6>
+                <input type="email" placeholder="Enter Email" id="emailcompanylogin">
+                <input type="password" placeholder="Enter Password" id="mdpcompanylogin">
+                <input type="button" value="Login" id="btn-login-company">
+                <label for="chk0" class="btm">Sign Up Here as a Company</label>
+                <label for="chk4" class="btm">Back</label>
+
+            </form>
+        </div>
+
+        <div class="f">
+            <label for="chk1" id="sup">Login as User</label>
+            <label for="chk2" id="sup">Sign up as User</label>
+            <label for="chk3" id="sup">Login as a Company</label>
+            <label for="chk0" id="sup">Sign Up Here as a Company</label>
+        </div>
+
+    </div>
+
+
+    
+</body>
+<script type="module" src="login.js"></script>
+</html>

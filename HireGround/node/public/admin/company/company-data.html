@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Entreprises</title>
+    <link rel="stylesheet" href="company-data.css">
+</head>
+<body>
+        
+    <nav>
+        <a href="../post-offer/post-data.html">Post-offer Admin</a>
+        <a href="../company/company-data.html">Company Admin</a>
+        <a href="../admin-index.html" class="home"><img src="/icon/Logo_HIREGROUND_.png" alt="Logo Hireground"></a>
+        <a href="../candidat/candidat-data.html">Candidat Admin</a>
+        <a href="../user/user-data.html">User Admin</a>
+    </nav>
+
+    <section id="home" class="section">
+        <button id="create-company-btn" class="action-btn">Creation</button>
+
+        <!-- Modal pour créer une nouvelle entreprise -->
+        <div id="create-modal" class="modal-creat" style="display:none;">
+            <div class="modal-content">
+                <form id="create-form">
+                    <label for="create-nomEntreprise">Company Name:</label>
+                    <input type="text" id="create-nomEntreprise" required>
+
+                    <label for="create-localisation">Localisation:</label>
+                    <input type="text" id="create-localisation" required> 
+
+                    <label for="create-contact">Contact:</label>
+                    <input type="text" id="create-contact" required>
+
+                    <label for="create-descriptif">Description:</label>
+                    <textarea id="create-descriptif" required></textarea>
+
+                    <label for="create-password">Password:</label>
+                    <input type="text" id="create-password" required>
+
+
+                    <button type="submit">Create</button>
+                    <button type="button" id="create-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Afficher la liste des entreprises -->
+        <div id="company-list-section">
+            <h2>Company List</h2>
+            <table id="company-list">
+                <thead>
+                    <tr>
+                        <th>Nom de l'Entreprise</th>
+                        <th>Localisation</th>
+                        <th>Contact</th>
+                        <th>Descriptif</th>
+                        <th>Mot de passe</th> <!-- Nouvelle colonne pour le mot de passe -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les données des entreprises seront insérées ici via JavaScript -->
+                </tbody>
+            </table>
+            
+        </div>
+
+        <div id="message-box" style="display: none; background-color: #000000; color: white; padding: 10px; margin-top: 10px;"></div>
+
+        <!-- Modal pour éditer une entreprise -->
+        <div id="edit-modal" class="modal-modify" style="display:none;">
+            <div class="modal-content">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-nomEntrepriseID"> <!-- Changez NomEntrepriseID en edit-nomEntrepriseID -->
+                    <input type="hidden" id="edit-localisation">
+
+                    <label for="edit-contact">Contact:</label>
+                    <input type="text" id="edit-contact" required>
+
+                    <label for="edit-descriptif">Description:</label>
+                    <textarea id="edit-descriptif" required></textarea>
+
+                    <label for="edit-password">Password:</label>
+                    <input type="text" id="edit-password" value="MDPEntreprise" readonly>
+
+
+                    <button type="submit">Submit the modification</button>
+                    <button type="button" id="edit-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="company-data.js" type="module"></script>
+</body>
+</html>

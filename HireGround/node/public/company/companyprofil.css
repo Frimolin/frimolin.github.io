@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+/*------VARIOATION----*/
+:root {
+    --background:#FFFAED;
+    --background-darker:#f4ecdb;
+    --background-lighter:#fffdfa;
+    --orange-head:#f8e1b4;
+    --orange:#fec6a3;
+    --blue:#4e5491;
+    --dark-pink:#ef8f91;
+    --box:#f8e1b4;
+    --green:#C4C3E3;
+    --vibrant-orange:#e488a2;
+    --old-pink:#fbdcf6;
+    --dark-blue:#9693C2;
+    --lime:#e9fad4;
+}
+
+* {
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: 1s ease;
+}
+
+body {
+    background-color: var(--background);
+    background-attachment: fixed;
+    background-size: cover;
+    perspective: 1000px;
+    display: flex;
+}
+
+/*----------HEADER-----------*/
+.sidebar{
+    width: 15%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar img {
+    height: auto;
+    width: 3vw;
+    margin-top: 3rem;
+}
+
+.logo {
+    height: auto;
+    width: 60%;
+    margin-left: 30px;
+    padding-top: 1rem;
+}
+
+.sidebar p{
+    font-size: 1.4rem;
+    padding: 5px 30px 5px 30px;
+    border : 2px solid var(--dark-blue);
+    border-radius: 10px;
+    align-items: end;
+    margin-top: 10rem;
+
+}
+
+/*SECTION*/
+/* Cacher les sections */
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    margin-right: 0rem;
+}
+
+/* Section active */
+.active {
+    display: block;
+    opacity: 1;
+}
+
+/*----------------MAIN---------*/
+.main {
+    display: flex;
+    width: 100%;
+    margin-top: 0rem;
+}
+
+.notif {
+    margin: 2rem;
+    margin-top: 0;
+    background-color: var(--orange-head);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 60%;
+    height: 40rem;
+    overflow: hidden;
+}
+
+.right {
+    width: 30%;
+}
+
+/*------------CREAT A POST------------*/
+.form-container {
+    background-color: var(--orange-head);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.form-container form {
+    width: 90%;
+}
+
+.form-container h2 {
+    margin-bottom: 2rem;
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    color:var(--blue);
+    font-size: 2.5rem;
+}
+
+.form-container .top , .form-container .second, .form-container .third, .form-container .fourth {
+    margin-bottom:2rem;
+    display: flex;
+    gap:2rem;
+}
+
+.form-container input, .form-container .dropdown, .form-container textarea {
+    width: 100%;
+    height: 2.5rem;
+    padding: 10px;
+    background-color: var(--orange-head);
+    border:2px solid var(--vibrant-orange);
+    border-radius: 10px;
+}
+
+.form-container textarea {
+    height: 6rem;
+}
+
+.form-container button {
+    padding: 0.9em 1.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: transparent;
+    border: 3px solid var(--dark-pink);
+    font-size: 14px;
+    position: relative;
+    font-family: inherit;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+.form-container  button::before {
+    content: "Post";
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: var(--lime);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+.form-container  button:hover::before {
+    left: 100%;
+    transform: scale(0) rotateY(360deg);
+    opacity: 0;
+  }
+  
+.form-container button::after {
+    content: "Post";
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: var(--lime);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: scale(0) rotateY(0deg);
+    opacity: 0;
+  }
+  
+.form-container button:hover::after {
+    left: 0;
+    transform: scale(1) rotateY(360deg);
+    opacity: 1;
+  }
+
+
+  #company-list {
+    width: 85%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#company-list th, #company-list td {
+    padding: 28px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid var(--blue);
+    font-size: 13px;
+ 
+}
+
+#company-list th {
+    background-color: #e0ede0; 
+}
+
+#notif-container {
+    margin-top: 20px;
+}
+
+.box-notif {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.list-poste{
+    background-color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    height: 39rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: 400;
+    color:var(--blue);
+    font-size: 2.5rem;
+}

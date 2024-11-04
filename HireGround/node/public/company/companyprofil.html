@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="companyprofil.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="/"><img src="/icon/Logo_HIREGROUND_.png" class="logo" alt="Home"></a>
+
+        <div class="navbar">
+            <a href="#" data-section="home"><img src="/icon/home.png" class="home" alt="Home"></a>
+            <a href="#" data-section="tab"><img src="/icon/profil.png" class="tab" alt="tab"></a> <!---->
+            <a href="#" data-section="create-form"><img src="/icon/creatpost.png" class="creatpost" alt="Create Post"></a>
+            <a href="/../candidat/offer-board/offer-board.html"><img src="/icon/emploi.png" class="emploi" alt="Index"></a>
+
+        </div>
+    </div>
+
+    <section id="home" class="section active">
+        <h2>Welcome back!</h2>
+        <div class="main">
+            <div class="notif">
+                <h3>Notification</h3>
+                <div id="notif-container"></div>
+            </div>
+            <div class="right">
+                <div class="offer-post" id="postes-section">
+                    <h3>Last post offer</h3>
+                    <div class="list-poste" id="list-poste"></div>
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="tab" class="section">
+        <div id="company-list-section">
+            <table id="company-list">
+                <thead>
+                    <tr>
+                        <th>Post Name</th>
+                        <th>Candidat Name</th>
+                        <th>Candidat First Name</th>
+                        <th>Contact</th>
+                        <th>Letter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            
+        </div>
+    </section>
+
+    <section id="create-form" class="section">
+        <div class="form-container">
+            <h2>Create a job offer</h2>
+            <form action="#" method="POST">
+                <div class="topper">
+                    <select class="input" id="localisationdropdown" placeholder="Location Name" required></select>
+                    <select class="input" id="entreprisedropdown" placeholder="Company Name" required></select>
+                </div>
+                <div class="top">
+                    <input type="text" id="create-nomPoste" class="form-input" placeholder="Job Title" required>
+                    <input type="text" id = "create-secteur" class="form-input" placeholder="Secteur" required>
+                </div>
+    
+                <div class="second">
+                    <input type="text" id="create-salaire" class="form-input" placeholder="Wage" required>
+                    <select class="dropdown" required id="create-contrat">
+                        <option value="" disabled selected>Type of contract</option>
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Fixed-term">Fixed-term</option>
+                        <option value="Permanent">Permanent</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Apprenticeship">Apprenticeship </option>
+                        <option value="Freelance">Freelance</option>
+                    </select>
+                </div>
+    
+                <div class="third">
+                    <textarea class="form-input form-input-large" id="create-mission" placeholder="Job description" required></textarea>
+                </div>
+
+                <div class="fourth">
+                    <textarea class="form-input form-input-large" id="create-profil" placeholder="Profile required" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submit">Post</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="companyprofil.js" type="module"></script>
+</body>
+</html>

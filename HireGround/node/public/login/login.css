@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Salsa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/*------VARIOATION----*/
+:root {
+    --background:#FFFAED;
+    --background-lighter:#fffdfa;
+    --orange-head:#f8e1b4;
+    --orange:#fec6a3;
+    --blue:#4e5491;
+    --dark-pink:#ef8f91;
+    --box:#f8e1b4;
+    --green:#C4C3E3;
+    --vibrant-orange:#e488a2;
+    --old-pink:#fbdcf6;
+    --dark-blue:#9693C2;
+
+
+}
+
+* {
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: 1s ease;
+}
+
+body {
+    background-color: var(--background);
+    background-attachment: fixed;
+    background-size: cover;
+    perspective: 1000px;
+}
+
+/*----------HEADER-----------*/
+.sidebar{
+    width: 15%;
+    height: 100%;
+    background-color: var(--orange-head);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar img {
+    height: auto;
+    width: 4vw;
+    margin-top: 5rem;
+}
+
+.logo {
+    height: auto;
+    width: 70%;
+    padding-top: 1rem;
+}
+
+.sidebar p{
+    font-size: 1.4rem;
+    padding: 5px 30px 5px 30px;
+    border : 2px solid var(--dark-blue);
+    border-radius: 10px;
+    align-items: end;
+    margin-top: 10rem;
+
+}
+
+/*---------BOX-------*/
+
+.box{
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    background: none;
+    left: calc(50% - 105px);
+    top:calc(50% - 250px);
+    transform-style: preserve-3d;
+}
+
+.box div {
+    width: 350px;
+    height: 500px;
+    position:absolute;
+    background-color: var(--box);
+    box-shadow: 0px 0px 5px var(--old-pink), 0px 0px 30px var(--old-pink);
+    border: 3px solid var(--dark-pink)
+}
+
+.box div:nth-child(5){
+    height: 350px;
+    box-shadow: 0px 0px 10px var(--vibrant-orange),  0px 0px 10px var(--vibrant-orange);
+}
+
+.a{transform: rotateY(0deg) translateZ(175px);}
+.b{transform: rotateY(90deg) translateZ(175px);}
+.c{transform: rotateY(180deg) translateZ(175px);}
+.d{transform: rotateY(270deg) translateZ(175px);}
+
+.f label{
+    position: relative;
+    width: 230px;
+    top: 2.4rem;
+    left: 55px;
+    color: var(--blue);
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    background-color: var(--background) ;
+    border-radius: 12px;
+    box-shadow: 0px 0px, 0px 0px 10px var(--old-pink);
+    cursor: pointer;
+}
+
+.f {
+    transform: rotateX(90deg) translateZ(175px);
+    background-color: var(--box);
+    box-shadow: 0px 0px 5px var(--old-pink), 0px 0px 30px var(--old-pink);
+    border: 3px solid var(--dark-pink);
+}
+
+
+#supp, #btn{
+    background-color: var(--background);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+#btn:focus{
+    width:calc(100% - 80px);
+    left:40px;
+}
+
+.title{
+    font-family: "Salsa", cursive;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    color: var(--vibrant-orange);
+    position:absolute
+}
+
+.frm input{
+    position: relative;
+    width: calc(100% - 80px);
+    left: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    top:60px;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    margin: 15px 0px;
+    font-size: 13px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.frm textarea{
+    position: relative;
+    width: calc(100% - 80px);
+    left: 40px;
+    display: block;
+    padding: 5px;
+    text-align: left;
+    line-height: 15px;
+    top:60px;
+    background: none;
+    outline: none;
+    border: none;
+    resize: none;
+    border-radius: 13px;
+    margin: 15px 0px;
+    font-size: 13px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+.frm textarea::placeholder {
+    text-align: center; /* Center the placeholder text */
+}
+
+.frm input:focus{
+    width:calc(100% - 40px);
+    margin-top: 2rem;
+    left: 20px;
+    color:var(--blue);
+    background-color: var(--green);
+    box-shadow: 0px 0px 10px #7171b6;
+}
+
+.btm {
+    position: relative;
+    top: 5rem;
+    font-size: 14px;
+    color: var(--vibrant-orange);
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.signup-comp {
+    margin-top: 3rem;
+}
+
+#chk0:checked ~ .box {transform: rotateY(0deg);} 
+#chk1:checked ~ .box {transform: rotateY(-180deg);}
+#chk2:checked ~ .box {transform: rotateY(-90deg);}
+#chk3:checked ~ .box {transform: rotateY(90deg);}
+#chk4:checked ~ .box {transform: rotateX(-90deg);}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Identifiants</title>
+    <link rel="stylesheet" href="user-data.css"> 
+</head>
+<body>
+        
+    <nav>
+        <a href="post-offer/post-data.html">Post-offer Admin</a>
+        <a href="company/company-data.html">Company Admin</a>
+        <a href="../admin-index.html" class="home"><img src="/icon/Logo_HIREGROUND_.png" alt="Logo Hireground"></a>
+        <a href="candidat/candidat-data.html">Candidat Admin</a>
+        <a href="user/user-data.html">User Admin</a>
+    </nav>
+
+    <section id="home" class="section">
+        <button id="create-user-btn" class="action-btn">Creation</button>
+
+        <div id="create-modal" class="modal-creat" style="display:none;">
+            <div class="modal-content">
+                <form id="create-form">
+
+                    <label for="create-EmailIdentifiant">Email Identifiant:</label>
+                    <input type="text" id="create-EmailIdentifiant" required> 
+
+                    <label for="create-FirstNameIdentifiant">First Name:</label>
+                    <input type="text" id="create-FirstNameIdentifiant" required>
+
+                    <label for="create-LastNameIdentifiant">Last Name:</label>
+                    <input type="text" id="create-LastNameIdentifiant" required>
+
+                    <label for="create-MDPIdentifiant">Password:</label>
+                    <input type="text" id="create-MDPIdentifiant" required>
+
+                    <label for="create-Admin">Admin:</label>
+                    <input type="checkbox" id="create-Admin">
+
+                    <button type="submit">Create</button>
+                    <button type="button" id="create-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Afficher la liste des Identifiants -->
+        <div id="user-list-section">
+            <h2>User List</h2>
+            <table id="user-list">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Admin</th>
+                        <th>Mot de passe</th> <!-- Nouvelle colonne pour le mot de passe -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les données des Identifiants seront insérées ici via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="message-box" style="display: none; background-color: #000000; color: white; padding: 10px; margin-top: 10px;"></div>
+
+        <!-- Modal pour éditer une Identifiant -->
+        <div id="edit-modal" class="modal-modify" style="display:none;">
+            <div class="modal-content">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-EmailIdentifiant"> <!-- Changez Email en edit-Email -->
+
+                    <label for="edit-FirstNameIdentifiant">First Name:</label>
+                    <input type="text" id="edit-FirstNameIdentifiant" required>
+
+                    <label for="edit-LastNameIdentifiant">Last Name:</label>
+                    <input type="text" id="edit-LastNameIdentifiant" required>
+
+                    <label for="edit-Admin">Admin:</label>
+                    <input type="checkbox" id="edit-Admin" value="Admin" readonly>
+
+                    <label for="edit-MDPIdentifiant">MDP:</label>
+                    <input type="text" id="edit-MDPIdentifiant" value="MDPIdentifiant" readonly>
+
+                    <button type="submit">Enregistrer les modifications</button>
+                    <button type="button" id="edit-close-btn">Fermer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="user-data.js" type="module"></script>
+</body>
+</html>

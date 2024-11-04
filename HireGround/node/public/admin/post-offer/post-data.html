@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profil</title>
+    <link rel="stylesheet" href="post-data.css"> <!-- Assurez-vous d'avoir un fichier CSS -->
+</head>
+<body>
+    
+    <nav>
+        <a href="post-offer/post-data.html">Post-offer Admin</a>
+        <a href="company/company-data.html">Company Admin</a>
+        <a href="/" class="home"><img src="/icon/Logo_HIREGROUND_.png" alt="Logo Hireground"></a>
+        <a href="candidat/candidat-data.html">Candidat Admin</a>
+        <a href="user/user-data.html">User Admin</a>
+    </nav>
+
+    <section id="home" class="section">
+        <button id="create-post-btn" class="action-btn">Creation</button>
+        <!-- Modal pour créer un nouveau poste -->
+        <div id="create-modal" class="modal-creat" style="display:none;">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <form id="create-form">
+
+                    <label for="create-nomPoste">Poste:</label>
+                    <input type="text" id="create-nomPoste" required>
+
+                    <label for="create-nomEntreprise">Nom de l'Entreprise:</label>
+                    <input type="text" id="create-nomEntreprise" required>
+
+                    <label for="create-localisation">Localisation:</label>
+                    <input type="text" id="create-localisation" required> 
+
+                    <label for="create-contrat">Contrat:</label>
+                    <input type="text" id="create-contrat" required>
+
+                    <label for="create-secteur">Secteur:</label>
+                    <input type="text" id="create-secteur" required>
+
+                    <label for="create-salaire">Salaire:</label>
+                    <input type="text" id="create-salaire" required>
+
+                    <label for="create-mission">Mission:</label>
+                    <textarea id="create-mission" required></textarea>
+
+                    <label for="create-profil">Profil Recherché:</label>
+                    <textarea id="create-profil" required></textarea>
+
+                    <button type="submit">Create</button>
+                    <button type="button" id="create-close-btn">Close</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Afficher les offres d'emploi -->
+        <div id="post-list-section">
+            <h2>Offer Job List</h2>
+            <table id="post-list">
+                <thead>
+                    <tr>
+                        <th>PosteID</th>
+                        <th>Entreprise</th>
+                        <th>Poste</th>
+                        <th>Contrat</th>
+                        <th>Localisation</th>
+                        <th>Contact</th>
+                        <th>Secteur</th>
+                        <th>Salaire</th>
+                        <th>Mission</th>
+                        <th>Profil Recherché</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les données des postes seront insérées ici via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div id="message-box" style="display: none; background-color: #000000; color: white; padding: 10px; margin-top: 10px;"></div>
+
+        <!-- Modal pour éditer -->
+        <div id="edit-modal" class="modal-modify" style="display:none;">
+            <div class="modal-content">
+                <form id="edit-form">
+                    <input type="hidden" id="edit-posteID">
+                    <label for="edit-nomPoste">Poste:</label>
+                    <input type="text" id="edit-nomPoste" required>
+        
+                    <label for="edit-secteur">Secteur:</label>
+                    <input type="text" id="edit-secteur" required>
+        
+                    <label for="edit-salaire">Salaire:</label>
+                    <input type="text" id="edit-salaire" required>
+        
+                    <label for="edit-mission">Mission:</label>
+                    <textarea id="edit-mission" required></textarea>
+        
+                    <label for="edit-profil">Profil Recherché:</label>
+                    <textarea id="edit-profil" required></textarea>
+
+                    <label for="edit-contrat">Contrat:</label>
+                    <textarea id="edit-contrat" required></textarea>
+
+                    <button type="submit">Enregistrer les modifications</button>
+                    <button type="button" id="edit-close-btn">Fermer</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="post-data.js" type="module"></script>
+</body>
+</html>

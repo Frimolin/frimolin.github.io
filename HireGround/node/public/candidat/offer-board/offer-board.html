@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireGround</title>
+    <link rel="stylesheet" href="offer-board.css">
+</head>
+<body>
+    <!-------------HEAD------------>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="/"><img src="/icon/home.png" class="home" alt="Home"></a>
+                <a href="offer-board.html"><img src="/icon/emploi.png" class="emploi" alt="Index"></a>
+            </div>
+            <a href="/"><img src="/icon/Logo_HIREGROUND_.png" class="logo"></a>
+            <a href="../../login/login.html"><p>Login</p></a> <!-----COOKIE AVEC LOGIN ET PROFIL AVEC CONDITION-->
+        </div>
+    </header>
+    
+    <!------------SEARCH BAR-------------->
+    <div class="search-bar">
+        <div class="top">
+            <div class="key">
+                <img src="/icon/loupe.png">
+                <input type="text" placeholder="Key words">
+            </div>
+            <div class="place">
+                <img src="/icon/location.png">
+                <input type="text" placeholder="Choose a place">
+            </div>
+            <div class="contract-type">
+                <img src="/icon/contrat.png">
+                <select id="contract-type">
+                    <option value="" disabled selected>Select contract type</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Fixed-term">Fixed-term</option>
+                    <option value="Permanent">Permanent</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Apprenticeship">Apprenticeship</option>
+                    <option value="Freelance">Freelance</option>
+                </select>
+            </div>
+            <button>Search</button>
+        </div>
+    </div>
+
+
+    <div class="allbox" id="job-listings">
+    </div>
+
+    <!----------------FOOT-------------->
+    <footer>
+        <div class="container">
+            <div class="navigation">
+                <a href="../../footer/about-us/about-us.html"><p>About Us</p></a>
+                <a href="../../footer/contact/contact.html"><p>Contact</p></a>
+                <a href="../../footer/faq/q&a.html"><p>Q&A / Help</p></a>
+                <a href="../../footer/sitemap/sitemap.html"><p>Sitemap</p></a>
+            </div>
+            <img src="/icon/Logo_HIREGROUND_.png" class="logo">
+            <div class="legal">
+                <a href="../../footer/legal-notice/legal-notice.html"><p>Legal Notice</p></a>
+                <a href="../../footer/term-use/term-use.html"><p>Terms of use</p></a>
+                <a href="../../private-policy/private-policy.html"><p>Privacy policy</p></a>
+                <a href="../../cookie-policy/cookie-policy.html"><p>Cookie policy</p></a>
+            </div>
+        </div>
+        <div class="Rights">
+            <p>© 2024 • HireGround. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="offer-board.js"></script>
+</body>
+</html>
